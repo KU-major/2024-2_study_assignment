@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public UIManager MyUIManager;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         // CamObj는 Character의 x, y position을 따라간다.
         // ---------- TODO ---------- 
+
         Vector3 dir = Character.transform.position - CamObj.transform.position;
         Vector3 moveVector = new Vector3(dir.x * CharacterSpeed * Time.deltaTime, dir.y * CharacterSpeed * Time.deltaTime, 0.0f);
         CamObj.transform.Translate(moveVector);
@@ -69,6 +71,7 @@ public class GameManager : MonoBehaviour
         // ---------- TODO ---------- 
         NowScore+=point;
         MyUIManager.DisplayScore(NowScore);
+        
         // -------------------- 
     }
 

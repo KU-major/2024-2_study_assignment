@@ -20,11 +20,15 @@ public class Character : MonoBehaviour
         // 좌클릭시 RemainJump를 하나 소모하여 CharacterJumpPower의 힘으로 점프한다.
         // ---------- TODO ---------- 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.Mouse0)&&RemainJump<MaxJump)
         {
             RemainJump++;
             Jump(CharacterJumpPower);
         }
+=======
+        
+>>>>>>> 911c860244a38f1128f2617e6599c7e2c5b94e2c
 =======
         
 >>>>>>> 911c860244a38f1128f2617e6599c7e2c5b94e2c
@@ -43,6 +47,7 @@ public class Character : MonoBehaviour
         // tag가 Obstacle인 것과 충돌하면 게임 오버한다.
         // ---------- TODO ---------- 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (col.gameObject.tag == "Platform")
         {
             RemainJump=0;
@@ -54,6 +59,9 @@ public class Character : MonoBehaviour
 =======
         
 >>>>>>> 911c860244a38f1128f2617e6599c7e2c5b94e2c
+=======
+        
+>>>>>>> 911c860244a38f1128f2617e6599c7e2c5b94e2c
         // -------------------- 
     }
 
@@ -62,11 +70,15 @@ public class Character : MonoBehaviour
         // tag가 Point인 것과 충돌하면 Point를 하나 얻고, 충돌한 오브젝트를 삭제한다.
         // ---------- TODO ---------- 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(col.gameObject.tag == "Point")
         {
             GM.GetPoint(1);
             Destroy(col.gameObject);
         }
+=======
+        
+>>>>>>> 911c860244a38f1128f2617e6599c7e2c5b94e2c
 =======
         
 >>>>>>> 911c860244a38f1128f2617e6599c7e2c5b94e2c
