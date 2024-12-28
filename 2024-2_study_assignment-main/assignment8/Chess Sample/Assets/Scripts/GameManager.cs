@@ -72,8 +72,13 @@ public class GameManager : MonoBehaviour
         PlacePiece(3, (2, backRow), direction); // 3: Bishop
         PlacePiece(3, (5, backRow), direction); // 3: Bishop
 
+<<<<<<< HEAD
         PlacePiece(1, (3, backRow), direction); // 1: Queen
         PlacePiece(0, (4, backRow), direction); // 0: King
+=======
+        PlacePiece(1, (3, backRow), direction); // 4: Queen
+        PlacePiece(0, (4, backRow), direction); // 5: King
+>>>>>>> 2e32da71090acd1d12fc3ca9a6dc00ef1126ec70
     }
 
     Piece PlacePiece(int pieceType, (int, int) pos, int direction)
