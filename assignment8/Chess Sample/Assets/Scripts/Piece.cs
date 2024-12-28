@@ -8,7 +8,7 @@ public abstract class Piece : MonoBehaviour
     public int PlayerDirection = 1;
     
     public Sprite WhiteSprite;
-    public Sprite BlackSprite;
+    public Sprite BlackSprite;=
     
     protected GameManager MyGameManager;
     protected SpriteRenderer MySpriteRenderer;

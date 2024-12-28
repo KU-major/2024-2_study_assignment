@@ -7,7 +7,6 @@ public class Knight : Piece
 {
     public override MoveInfo[] GetMoves()
     {
-        // --- TODO ---
         return new MoveInfo[]
       {
             new MoveInfo(2, 1, 1),   // ¿À¸¥ÂÊÀ¸·Î µÎ Ä­, À§·Î ÇÑ Ä­
@@ -20,6 +19,5 @@ public class Knight : Piece
             new MoveInfo(-1, -2, 1)  // ¾Æ·¡·Î µÎ Ä­, ¿ÞÂÊÀ¸·Î ÇÑ Ä­
       };
     
-    // ------
     }
 }

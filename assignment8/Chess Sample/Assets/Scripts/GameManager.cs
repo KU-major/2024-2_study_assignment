@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // 프리팹들
     public GameObject TilePrefab;
-    public GameObject[] PiecePrefabs;
+    public GameObject[] PiecePrefabs; 
     public GameObject EffectPrefab;
 
+    // 오브젝트의 parent들
     private Transform TileParent;
     private Transform PieceParent;
     private Transform EffectParent;
+    
     private MovementManager movementManager;
     private UIManager uiManager;
-
-    public int CurrentTurn = 1;
-    public Tile[,] Tiles = new Tile[Utils.FieldWidth, Utils.FieldHeight];
-    public Piece[,] Pieces = new Piece[Utils.FieldWidth, Utils.FieldHeight];
+    
+    public int CurrentTurn = 1; // 현재 턴 1 - 백, 2 - 흑
+    public Tile[,] Tiles = new Tile[Utils.FieldWidth, Utils.FieldHeight];   // Tile들
+    public Piece[,] Pieces = new Piece[Utils.FieldWidth, Utils.FieldHeight];    // Piece들
+>>>>>>> 6845cc7c6abb5e5b97e1aaed0cf630794d7b9f8b
 
     void Awake()
     {
         TileParent = GameObject.Find("TileParent").transform;
         PieceParent = GameObject.Find("PieceParent").transform;
         EffectParent = GameObject.Find("EffectParent").transform;
-
         uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         movementManager = gameObject.AddComponent<MovementManager>();
         movementManager.Initialize(this, EffectPrefab, EffectParent);
-
         InitializeBoard();
     }
 
@@ -75,7 +77,6 @@ public class GameManager : MonoBehaviour
 
         PlacePiece(1, (3, backRow), direction); // 4: Queen
         PlacePiece(0, (4, backRow), direction); // 5: King
-
     }
 
     Piece PlacePiece(int pieceType, (int, int) pos, int direction)
@@ -119,12 +120,14 @@ public class GameManager : MonoBehaviour
         Pieces[targetPos.Item1, targetPos.Item2] = piece;
 
         ChangeTurn();
+
+  
     }
 
     void ChangeTurn()
     {
+
         CurrentTurn *= -1; // 턴 변경
         uiManager.UpdateTurn(CurrentTurn); // UI 갱신
     }
 }
-

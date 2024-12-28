@@ -20,6 +20,5 @@ public class Tile : MonoBehaviour
         MyPos = targetPos;
         transform.position = new Vector3(targetPos.Item1, targetPos.Item2, 0);
         MySpriteRenderer.color = tileColor;
-        // ------
     }
 }

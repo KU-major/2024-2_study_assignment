@@ -14,7 +14,7 @@ public class ClickHandler : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
-
+    // 마우스의 위치를 (int, int) 좌표로 보정해주는 함수
     private (int, int) GetBoardPosition(Vector3 worldPosition)
     {
         float x = worldPosition.x + (Utils.TileSize * Utils.FieldWidth) / 2f;
@@ -46,6 +46,17 @@ public class ClickHandler : MonoBehaviour
             gameManager.ShowPossibleMoves(selectedPiece);
         }
         // ------
+        Piece clickedPiece = gameManager.Pieces[boardPos.Item1, boardPos.Item2];
+        if (clickedPiece != null && clickedPiece.PlayerDirection == gameManager.CurrentTurn)
+        {
+            selectedPiece = clickedPiece;
+            isDragging = true;
+            dragOffset = selectedPiece.transform.position - mousePosition;
+            dragOffset.z = 0;
+            originalPosition = selectedPiece.transform.position;
+            
+            gameManager.ShowPossibleMoves(selectedPiece);
+        }
     }
 
     void HandleDrag()
@@ -83,7 +94,6 @@ public class ClickHandler : MonoBehaviour
             selectedPiece = null;
             isDragging = false;
             // ------
-        }
     }
 
     void Update()

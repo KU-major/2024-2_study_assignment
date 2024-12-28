@@ -14,6 +14,6 @@ public class Bishop : Piece
             new MoveInfo(-1, 1, Utils.FieldWidth), // ¿ÞÂÊ À§
             new MoveInfo(-1, -1, Utils.FieldWidth) // ¿ÞÂÊ ¾Æ·¡
       };
-        // ------
+
     }
 }

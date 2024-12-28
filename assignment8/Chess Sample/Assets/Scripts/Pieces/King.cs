@@ -7,7 +7,6 @@ public class King : Piece
 {
     public override MoveInfo[] GetMoves()
     {
-        // --- TODO ---
         return new MoveInfo[]
         {
             new MoveInfo(1, 1, 1),  // ´ë°¢¼±
@@ -19,6 +18,5 @@ public class King : Piece
             new MoveInfo(0, 1, 1),
             new MoveInfo(0, -1, 1)
         };
-        // ------
     }
 }

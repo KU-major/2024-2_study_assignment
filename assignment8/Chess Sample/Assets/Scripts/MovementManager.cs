@@ -8,7 +8,7 @@ public class MovementManager : MonoBehaviour
     private GameObject effectPrefab;
     private Transform effectParent;
     private List<GameObject> currentEffects = new List<GameObject>();
-
+    
     public void Initialize(GameManager gameManager, GameObject effectPrefab, Transform effectParent)
     {
         this.gameManager = gameManager;
@@ -45,7 +45,6 @@ public class MovementManager : MonoBehaviour
         return true; // 이동 가능  
         // ------
     }
-
     private bool IsValidMoveWithoutCheck(Piece piece, (int, int) targetPos)
     {
         if (!Utils.IsInBoard(targetPos) || targetPos == piece.MyPos) return false;
@@ -80,7 +79,6 @@ public class MovementManager : MonoBehaviour
 
         return isValid;
     }
-
     private bool IsInCheck(int playerDirection)
     {
         (int, int) kingPos = (-1, -1); // 왕의 위치
@@ -98,7 +96,6 @@ public class MovementManager : MonoBehaviour
             if (kingPos.Item1 != -1 && kingPos.Item2 != -1) break;
         }
 
-        // 왕이 지금 체크 상태인지를 리턴
         // --- TODO ---
         // 상대방 말들의 움직임 확인
         for (int x = 0; x < Utils.FieldWidth; x++)
@@ -134,7 +131,6 @@ public class MovementManager : MonoBehaviour
         }
 
         return false;
-        // ------
     }
 
     public void ShowPossibleMoves(Piece piece)

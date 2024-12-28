@@ -56,9 +56,13 @@ namespace calculator
                 case "+": return num1 + num2;
                 case "-": return num1 - num2;
                 case "*": return num1 * num2;
+<<<<<<< HEAD
                 case "/":
                     if(num2 != 0) return num1 / num2;
                     else: return -1;
+=======
+                case "/": return num1 / num2;
+>>>>>>> 6845cc7c6abb5e5b97e1aaed0cf630794d7b9f8b
                 default: return -1;
             }
         }
