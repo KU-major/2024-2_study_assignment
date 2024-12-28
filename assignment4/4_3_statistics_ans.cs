@@ -56,7 +56,7 @@ namespace statistics
             Console.WriteLine("English : {0}", to_english_score / stdCount);
             Console.WriteLine("\nMax and min score");
             Console.WriteLine("Math({0}, {1})", max_math, min_math);
-            Console.WriteLine("Englisg({0}, {1})", max_english, min_english);
+            Console.WriteLine("English({0}, {1})", max_english, min_english);
             Console.WriteLine("Science({0}, {1})", max_science, min_science);
             Console.WriteLine("\nStudents rank by total scores : ");
 
