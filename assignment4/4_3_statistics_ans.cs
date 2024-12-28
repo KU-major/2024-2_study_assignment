@@ -7,7 +7,7 @@ namespace statistics
     {
         static void Main(string[] args)
         {
-            
+
             string[,] data = {
                 {"StdNum", "Name", "Math", "Science", "English"},
                 {"1001", "Alice", "85", "90", "78"},
@@ -34,31 +34,30 @@ namespace statistics
                 int math_score = int.Parse(data[i, 2]);
                 int science_score = int.Parse(data[i, 3]);
                 int english_score = int.Parse(data[i, 4]);
-                    
+
                 if (max_math < math_score) max_math = math_score;
                 if (min_math > math_score) min_math = math_score;
-                if(max_science < science_score) max_science = science_score;
+                if (max_science < science_score) max_science = science_score;
                 if (max_english < english_score) max_english = english_score;
-                if(min_english > english_score) min_english = english_score;
-                if(min_science > science_score) min_science = science_score;
+                if (min_english > english_score) min_english = english_score;
+                if (min_science > science_score) min_science = science_score;
 
-                total_math_score += math_score; 
+                total_math_score += math_score;
                 to_science_score += science_score;
                 to_english_score += english_score;
-               
+
 
                 int totalScore = math_score + science_score + english_score;
                 totalScores[i - 1] = (data[i, 1], totalScore);
             }
 
-            Console.WriteLine("Math : {0}", total_math_score/stdCount);
+            Console.WriteLine("Math : {0}", total_math_score / stdCount);
             Console.WriteLine("Science : {0}", to_science_score / stdCount);
             Console.WriteLine("English : {0}", to_english_score / stdCount);
             Console.WriteLine("\nMax and min score");
             Console.WriteLine("Math({0}, {1})", max_math, min_math);
             Console.WriteLine("English({0}, {1})", max_english, min_english);
             Console.WriteLine("Science({0}, {1})", max_science, min_science);
-            Console.WriteLine("\nStudents rank by total scores : ");
 
             var rankedScores = totalScores
                 .OrderByDescending(student => student.TotalScore)
@@ -74,7 +73,7 @@ namespace statistics
         }
     }
 
-    
+
 }
 
 
