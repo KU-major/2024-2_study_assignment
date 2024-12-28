@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 523750028691203378}
   - component: {fileID: 8976545877569002684}
+<<<<<<< HEAD
+=======
   - component: {fileID: 6108695464800065911}
+>>>>>>> 6845cc7c6abb5e5b97e1aaed0cf630794d7b9f8b
   m_Layer: 0
   m_Name: Piece
   m_TagString: Untagged
@@ -85,6 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
+=======
 --- !u!114 &6108695464800065911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,3 +108,4 @@ MonoBehaviour:
   PlayerDirection: 1
   WhiteSprite: {fileID: 21300000, guid: 639171adda932da49b30b273ac6387be, type: 3}
   BlackSprite: {fileID: 21300000, guid: c4585006ba884f449a1d3319ba4a2be7, type: 3}
+>>>>>>> 6845cc7c6abb5e5b97e1aaed0cf630794d7b9f8b

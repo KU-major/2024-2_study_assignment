@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+# Chess Game 과제 명세
+
+Unity로 체스 게임을 구현하는 과제입니다.
+
+**유니티 2022.3.26f1 버전을 사용하였습니다.**
+
+## 1. Scene 구성
+
+1. 다음 빈 오브젝트들을 생성하세요:
+- TileParent
+- PieceParent
+- EffectParent
+- GameManager
+
+2. Canvas를 생성하고 다음 UI 요소를 추가하세요:
+- TurnText: 현재 턴을 표시
+- MessageText: 게임 상태 메시지 표시
+
+3. 프리팹 참조를 설정하세요:
+- TilePrefab: 체스판의 각 타일
+- PiecePrefabs: 체스 말들의 프리팹 배열
+- EffectPrefab: 이동 가능 위치 표시 이펙트
+=======
 # Assignment 8
 
 기초 스터디 8차시 Unity 4차시에 대한 과제입니다.
@@ -85,6 +109,7 @@ Sample Scene을 사용하셔도 되고, 따로 만드셔도 좋습니다.
 - MessageText라는 이름의 빈 오브젝트를 자식으로 붙이고, Text 컴포넌트를 붙입니다.
 - TurnText는 우측 상단에, MessageText는 중앙에 위치시킵니다.
 
+>>>>>>> 6845cc7c6abb5e5b97e1aaed0cf630794d7b9f8b
 
 ## 2. 주요 기능 구현
 
@@ -111,6 +136,27 @@ Sample Scene을 사용하셔도 되고, 따로 만드셔도 좋습니다.
 - 이동 규칙 (GetMoves) 구현
 - 스프라이트 및 방향 설정
 
+<<<<<<< HEAD
+### UIManager
+- 현재 턴 표시
+- 체크/체크메이트 메시지 표시
+- 게임 상태 메시지 관리
+
+## 3. 구현 세부사항
+
+1. 각 체스 말은 자신의 이동 규칙을 GetMoves()로 정의
+2. 폰의 특수 규칙 (대각선 이동시 상대 말 잡기) 구현
+3. 체크 상태 검증을 위한 임시 이동 처리
+4. 드래그 앤 드롭으로 말 이동 구현
+5. 턴 시스템 구현
+
+## 4. 제출 요구사항
+
+- 모든 스크립트의 TODO 주석 부분 구현
+- Scene 저장 및 프로젝트 빌드 확인
+- 정해진 branch에 push
+=======
 ### Tile
 - 타일 색깔 설정
 - 타일 배치 설정
+>>>>>>> 6845cc7c6abb5e5b97e1aaed0cf630794d7b9f8b

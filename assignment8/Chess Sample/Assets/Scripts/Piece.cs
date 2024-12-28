@@ -4,11 +4,11 @@ using UnityEngine;
 
 public abstract class Piece : MonoBehaviour
 {
-    public (int, int) MyPos;    // 자신의 좌표
-    public int PlayerDirection = 1; // 자신의 방향 1 - 백, 2 - 흑
+    public (int, int) MyPos;
+    public int PlayerDirection = 1;
     
-    public Sprite WhiteSprite;  // 백일 때의 sprite
-    public Sprite BlackSprite;  // 흑일 때의 sprite
+    public Sprite WhiteSprite;
+    public Sprite BlackSprite;=
     
     protected GameManager MyGameManager;
     protected SpriteRenderer MySpriteRenderer;
@@ -19,7 +19,6 @@ public abstract class Piece : MonoBehaviour
         MySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Piece의 초기 설정 함수
     public void initialize((int, int) targetPos, int direction)
     {
         PlayerDirection = direction;
@@ -27,24 +26,31 @@ public abstract class Piece : MonoBehaviour
         MoveTo(targetPos);
     }
 
-    // sprite 초기 설정 함수
     void initSprite(int direction)
     {
-        // direction에 따라 sprite를 결정하고, 방향을 결정함
+        // direction에 따라 sprite를 설정하고 회전함
         // --- TODO ---
-        
+        if (direction == 1)
+        {
+            MySpriteRenderer.sprite = WhiteSprite;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (direction == -1)
+        {
+            MySpriteRenderer.sprite = BlackSprite;
+            transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
         // ------
     }
 
-    // piece의 실제 이동 함수
     public void MoveTo((int, int) targetPos)
     {
-        // MyPos를 업데이트하고, targetPos로 이동
-        // MyGameManager.Pieces를 업데이트
+        // 말을 이동시킴
         // --- TODO ---
-        
+        MyPos = targetPos;
+        transform.position = new Vector3(targetPos.Item1, targetPos.Item2, 0);
         // ------
     }
-    
+
     public abstract MoveInfo[] GetMoves();
 }

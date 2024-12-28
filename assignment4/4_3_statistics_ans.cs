@@ -7,7 +7,6 @@ namespace statistics
     {
         static void Main(string[] args)
         {
-
             string[,] data = {
                 {"StdNum", "Name", "Math", "Science", "English"},
                 {"1001", "Alice", "85", "90", "78"},
@@ -46,19 +45,15 @@ namespace statistics
                 to_science_score += science_score;
                 to_english_score += english_score;
 
-
                 int totalScore = math_score + science_score + english_score;
                 totalScores[i - 1] = (data[i, 1], totalScore);
             }
 
+
             Console.WriteLine("Math : {0}", total_math_score / stdCount);
-            Console.WriteLine("Science : {0}", to_science_score / stdCount);
-            Console.WriteLine("English : {0}", to_english_score / stdCount);
-            Console.WriteLine("\nMax and min score");
-            Console.WriteLine("Math({0}, {1})", max_math, min_math);
+
             Console.WriteLine("English({0}, {1})", max_english, min_english);
             Console.WriteLine("Science({0}, {1})", max_science, min_science);
-
             var rankedScores = totalScores
                 .OrderByDescending(student => student.TotalScore)
                 .Select((student, index) => (student.Name, Rank: index + 1))
@@ -72,7 +67,6 @@ namespace statistics
             }
         }
     }
-
 
 }
 
